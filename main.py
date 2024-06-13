@@ -15,6 +15,7 @@ def get_secrets(token: str):
         "Authorization": f"Bearer {token}"
     }
     response = requests.get(url, headers=headers)
+    print(response.text)
     return response.json()
 
 def get_tailscale_api_token(client_id: str, client_secret: str):
