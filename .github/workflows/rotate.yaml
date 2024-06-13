@@ -1,8 +1,10 @@
 name: Rotate Tailscale secret
 
 on:
-    push:
-        branches: [main]
+    schedule:
+        # Run at midnight on the first day of the month
+        # Every month
+        - cron: '0 0 1 * *'
 
 jobs:
     rotate:
