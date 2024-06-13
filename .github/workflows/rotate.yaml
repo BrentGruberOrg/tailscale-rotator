@@ -22,4 +22,8 @@ jobs:
               run: pip install -r requirements.txt
 
             - name: Rotate Tailscale secret
+              env:
+                DOPPLER_SERVICE_TOKEN: ${{ secrets.DOPPLER_SERVICE_TOKEN }}
+                PROJECT: ${{ secrets.PROJECT }}
+                CONFIG: ${{ secrets.CONFIG }}
               run: python main.py
