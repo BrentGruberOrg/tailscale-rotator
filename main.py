@@ -1,6 +1,10 @@
 import requests
 from config import DOPPLER_TOKEN, PROJECT, CONFIG
 
+print(DOPPLER_TOKEN)
+print(PROJECT)
+print(CONFIG)   
+
 
 def get_secrets(token: str):
     """
