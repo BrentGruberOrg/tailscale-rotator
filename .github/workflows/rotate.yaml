@@ -23,7 +23,7 @@ jobs:
 
             - name: Rotate Tailscale secret
               env:
-                DOPPLER_SERVICE_TOKEN: ${{ secrets.DOPPLER_SERVICE_TOKEN }}
+                DOPPLER_TOKEN: ${{ secrets.DOPPLER_SERVICE_TOKEN }}
                 PROJECT: ${{ secrets.PROJECT }}
                 CONFIG: ${{ secrets.CONFIG }}
               run: python main.py
